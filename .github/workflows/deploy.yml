@@ -17,6 +17,7 @@ on:
       - main
       - release
       - 'dev-*'
+      - 'feature/*'
     
       # changed appening in this path would be ignore
     paths-ignore:
