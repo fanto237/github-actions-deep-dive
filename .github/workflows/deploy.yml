@@ -6,10 +6,21 @@ on:
     types:
       - opened
       - edited
+    # choose the branch where a pull request in would trigger the workflow
+    branches:
+      - main
+      - release
+      - 'dev-*'
 
-  # push:
-  #   branches:
-  #     - 'main'
+  push:
+    branches:
+      - main
+      - release
+      - 'dev-*'
+    
+      # changed appening in this path would be ignore
+    paths-ignore:
+      - '.github/workflows/*'
 
   workflow_dispatch:
 
